@@ -112,9 +112,6 @@ export default {
 </script>
 
 <style scoped>
-  .main-page {
-    width: 100%;
-  }
 
   .main-page__header {
     width: 1200px;
@@ -126,7 +123,7 @@ export default {
   }
 
   .main-page__bookForm {
-    margin-top: 10px;
+    margin: 15px 40px 0px 40px;
   }
 
   .books-direction {
@@ -142,6 +139,7 @@ export default {
   }
 
   .book-info {
+    margin-left: 50px;
     margin-right: 480px;
     margin-top: 50px;
   }
@@ -151,5 +149,21 @@ export default {
     padding: 15px;
     border: 1px solid #d95448;
     background: #F0ECE0;
+  }
+
+  @media (max-width: 320px) {
+    .bookshelf-wrapper {
+      margin-left: 20px;
+      width: 550px;
+    }
+
+    .book-info {
+      margin-top: 50px;
+      margin-right: 50px;
+    }
+
+    .main-page__bookForm {
+      width: 100px;
+    }
   }
 </style>
