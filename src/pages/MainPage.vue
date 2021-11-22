@@ -18,12 +18,6 @@
         >
           Положить новую книгу
         </button>
-        <div v-if="isShow">
-          <book-form
-            class="main-page__bookForm"
-            @save="addNewBook"
-          />
-        </div>
       </div>
     </div>
     <div class="books-direction">
@@ -37,6 +31,12 @@
             :books-list="booksList"
           />
         </div>
+      </div>
+      <div v-if="isShow">
+        <book-form
+          class="main-page__bookForm"
+          @save="addNewBook"
+        />
       </div>
       <div>
         <book-info
@@ -117,16 +117,12 @@ export default {
   }
 
   .main-page__header {
+    width: 1200px;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100px;
-  }
-  .main-page__dropdown {
-    position: absolute;
-    left: 5%;
-    top: 35%;
   }
 
   .main-page__bookForm {
@@ -146,9 +142,8 @@ export default {
   }
 
   .book-info {
-    position: absolute;
-    right: 25%;
-    top: 10%;
+    margin-right: 480px;
+    margin-top: 50px;
   }
 
   .main-page__button {
@@ -157,5 +152,4 @@ export default {
     border: 1px solid #d95448;
     background: #F0ECE0;
   }
-
 </style>
